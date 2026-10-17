@@ -1,20 +1,25 @@
-MAKEUP FLOREN — WEBSITE + ADMIN V2
+MAKEUP FLOREN — WEBSITE + ADMIN EDITABLE V3
 
 FILES
 - index.html: website pelanggan
-- admin.html: admin untuk booking, layanan/harga, konten, foto, WhatsApp, sosial media, dan teks
+- admin.html: dashboard booking + editor konten website
 - assets/: foto default
 
-CARA MENCOBA
-1. Ekstrak seluruh ZIP ke satu folder (jangan pisahkan index.html, admin.html, dan assets).
-2. Buka admin.html di browser untuk mengatur konten.
-3. Menu Konten Website dapat mengubah nama brand, tagline, deskripsi, nomor WhatsApp, URL Instagram/Facebook/TikTok, teks promo, teks Tentang, foto, nama layanan, dan harga.
-4. Tekan Simpan pengaturan.
-5. Buka index.html pada browser/perangkat yang sama untuk melihat perubahan.
-6. Ekspor pengaturan JSON untuk cadangan.
+FITUR ADMIN V3
+- Ubah nama brand, tagline, deskripsi, teks promo, teks tentang
+- Ubah nomor WhatsApp dan link Instagram/Facebook/TikTok
+- Ganti foto model utama dan foto layanan/galeri melalui upload file
+- Ubah nama dan harga menu layanan
+- Tambah menu baru dan hapus menu yang tidak digunakan
+- Ekspor/impor pengaturan JSON sebagai cadangan
+- Tetap mencakup dashboard booking, status, tambah booking manual, dan ekspor CSV
 
-BATASAN PENTING VERSI INI
-Ini prototipe statis. Pengaturan disimpan dalam localStorage pada browser/perangkat yang sama. Perubahan tidak otomatis tersinkron ke perangkat pelanggan atau admin lain, dan belum ada login admin yang aman. Booking pelanggan melalui perangkat lain tidak otomatis masuk ke dashboard. Jangan mempublikasikan halaman admin ini sebagai sistem bisnis online sebelum ditambahkan autentikasi server dan database.
+CARA UPDATE DI GITHUB/VERCEL
+1. Upload/replace index.html dan admin.html di root repository GitHub.
+2. Pastikan semua gambar ada di folder assets/ dengan nama yang sesuai.
+3. Commit changes. Vercel akan deploy ulang otomatis.
+4. Buka https://makeupfloren.vercel.app/admin.html untuk mengelola.
+5. Setelah menyimpan pengaturan, buka website pada browser yang sama dan refresh.
 
-AGAR BENAR-BENAR ONLINE
-Perlu hosting dan backend/database (misalnya Supabase/Firebase atau backend khusus), autentikasi admin, penyimpanan gambar online, serta menghubungkan formulir booking ke database. Setelah itu perubahan admin dapat langsung terlihat oleh semua pengunjung tanpa edit kode.
+BATASAN PENTING
+Versi ini masih website statis. Pengaturan disimpan di localStorage browser pada domain website. Perubahan teks/menu akan dibaca website di browser yang sama; foto yang diunggah disimpan sebagai data lokal browser. Pengaturan tidak otomatis tersinkron ke browser/perangkat pelanggan lain. Booking dari perangkat pelanggan tidak otomatis masuk ke admin. Admin belum memiliki login aman. Untuk sistem produksi yang benar-benar sinkron diperlukan backend/database, autentikasi server, dan penyimpanan foto online.
